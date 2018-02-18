@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyUp(KeyCode.W))
             movementVertical = 0;
 
-        // Check if the player is moving up or down;
+         //Check if the player is moving up or down;
         if (Input.GetKeyDown(KeyCode.A))
             movementHorizontal = -5;
 
