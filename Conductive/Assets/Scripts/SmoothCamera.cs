@@ -9,7 +9,7 @@ public class SmoothCamera : MonoBehaviour {
     [SerializeField] private Transform lookAt;
     [SerializeField] private Vector3 offset;
 
-	void LateUpdate ()
+	void LateUpdate()
     {
         Vector3 desiredPosition = lookAt.transform.position + offset;
 
