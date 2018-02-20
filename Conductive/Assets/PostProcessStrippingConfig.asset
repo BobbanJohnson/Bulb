@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f29da58f3a63f649a512733d24af22c, type: 3}
+  m_Name: PostProcessStrippingConfig
+  m_EditorClassIdentifier: 
+  stripUnsupportedShaders: 1
+  stripDebugShaders: 0
+  stripComputeShaders: 0
+  result:
+    shaders:
+      autoExposure: {fileID: 0}
+      bloom: {fileID: 0}
+      copy: {fileID: 0}
+      copyStd: {fileID: 0}
+      discardAlpha: {fileID: 0}
+      depthOfField: {fileID: 0}
+      finalPass: {fileID: 0}
+      grainBaker: {fileID: 0}
+      motionBlur: {fileID: 0}
+      temporalAntialiasing: {fileID: 0}
+      subpixelMorphologicalAntialiasing: {fileID: 0}
+      texture2dLerp: {fileID: 0}
+      uber: {fileID: 0}
+      lut2DBaker: {fileID: 0}
+      lightMeter: {fileID: 0}
+      gammaHistogram: {fileID: 0}
+      waveform: {fileID: 0}
+      vectorscope: {fileID: 0}
+      debugOverlays: {fileID: 0}
+      deferredFog: {fileID: 0}
+      scalableAO: {fileID: 0}
+      multiScaleAO: {fileID: 0}
+      screenSpaceReflections: {fileID: 0}
+    computeShaders:
+      exposureHistogram: {fileID: 0}
+      lut3DBaker: {fileID: 0}
+      texture3dLerp: {fileID: 0}
+      gammaHistogram: {fileID: 0}
+      waveform: {fileID: 0}
+      vectorscope: {fileID: 0}
+      multiScaleAODownsample1: {fileID: 0}
+      multiScaleAODownsample2: {fileID: 0}
+      multiScaleAORender: {fileID: 0}
+      multiScaleAOUpsample: {fileID: 0}
+      gaussianDownsample: {fileID: 0}
