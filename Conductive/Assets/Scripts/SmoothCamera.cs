@@ -1,25 +1,31 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SmoothCamera : MonoBehaviour {
 
-    [SerializeField] private bool smooth;
-    [SerializeField] private float smoothSpeed;
-    [SerializeField] private Transform lookAt;
-    [SerializeField] private Vector3 offset;
+    [SerializeField] float _smoothSpeed;
+    [SerializeField] Transform _lookAt;
+    [SerializeField] Vector3 _offset;
 
-	void LateUpdate()
+
+    void Awake()
     {
-        Vector3 desiredPosition = lookAt.transform.position + offset;
-
-        if (smooth)
-        {
-            transform.position = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-        }
-        else
-        {
-            transform.position = desiredPosition;
-        }
+        PlayerManager.instance.OnTargetPlayerChanged += SetFollowTarget;
     }
-}
+
+
+    void LateUpdate()
+    {
+        Vector3 desiredPosition = _lookAt.transform.position + _offset;
+
+        transform.position = Vector3.Lerp(transform.position, desiredPosition, _smoothSpeed);
+    }
+    
+
+    void SetFollowTarget(PlayerMovement inPlayer)
+    {
+        _lookAt = inPlayer.transform;
+    }
+}   
