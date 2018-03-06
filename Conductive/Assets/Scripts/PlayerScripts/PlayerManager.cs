@@ -2,22 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour {
-
-    static PlayerManager _instance;
-    public static PlayerManager instance { get { return _instance; } }
-
+public class PlayerManager : MonoBehaviour
+{
     [Header("Switch character parameters")]
     [SerializeField] List<PlayerMovement> _playersInScene;
     int _currentPlayerID = 0;
 
     public event System.Action<PlayerMovement> OnTargetPlayerChanged;
-
-
-    void Awake()
-    {
-        _instance = this;
-    }
 
 
     void Update()

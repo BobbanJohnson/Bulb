@@ -12,7 +12,7 @@ public class SmoothCamera : MonoBehaviour {
 
     void Awake()
     {
-        PlayerManager.instance.OnTargetPlayerChanged += SetFollowTarget;
+        FindObjectOfType<PlayerManager>().OnTargetPlayerChanged += SetFollowTarget;
     }
 
 

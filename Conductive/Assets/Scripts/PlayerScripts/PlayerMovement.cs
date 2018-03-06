@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    [Header("Player behaviour varaible")]
+    [Header("Player behaviour variables")]
     [SerializeField] bool _characterCanMove = false;
 
 
@@ -19,9 +19,11 @@ public class PlayerMovement : MonoBehaviour {
     Quaternion _targetRotation;
 
     CharacterController _characterController;
+    PlayerManager _playerManager;
 
     void Awake()
     {
+        _playerManager = FindObjectOfType<PlayerManager>(); 
         _characterController = GetComponent<CharacterController>();
     }
 
@@ -75,9 +77,9 @@ public class PlayerMovement : MonoBehaviour {
     public void ManualUpdate()
     {
         if (Input.GetKeyDown(KeyCode.E))
-            PlayerManager.instance.CyclePlayer(true); //Cycle forward
+            _playerManager.CyclePlayer(true); //Cycle forward
         if (Input.GetKeyDown(KeyCode.Q))
-            PlayerManager.instance.CyclePlayer(false); //Cycle backward
+            _playerManager.CyclePlayer(false); //Cycle backward
     }
 
 
