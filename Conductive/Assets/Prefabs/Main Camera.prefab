@@ -102,7 +102,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 4805431037907038}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 4294967241
+    m_Bits: 1
   stopNaNPropagation: 1
   antialiasingMode: 1
   temporalAntialiasing:
@@ -156,9 +156,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8842a6e5b9f0a004aa7ad3672b8e0f52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smoothSpeed: 0.125
-  _lookAt: {fileID: 0}
-  _offset: {x: 0, y: 19.4, z: -26}
+  smooth: 1
+  smoothSpeed: 0.27
+  lookAt: {fileID: 0}
+  offset: {x: 0, y: 19.4, z: -26}
 --- !u!114 &114975631907585338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -170,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 1bba7ce324b93724aa8adda719ae7757, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 9653ed83ab3934d4989b9083188fb5ac, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1

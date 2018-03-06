@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
-
+public class PlayerMovement : MonoBehaviour
+{
     [Header("Player behaviour variables")]
     [SerializeField] bool _characterCanMove = false;
 
-
     [Header("Movement variables")]
-    [SerializeField] Transform _rotationTransform;
     [SerializeField] float _movementSpeed;
     [SerializeField] float _gravity;
 
-
     [Header("Rotation variables")]
+    [SerializeField] Transform _rotationTransform;
     [SerializeField] float _rotationSpeed;
     Quaternion _targetRotation;
 
     CharacterController _characterController;
     PlayerManager _playerManager;
+
 
     void Awake()
     {
