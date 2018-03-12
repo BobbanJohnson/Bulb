@@ -47,4 +47,19 @@ public class PlayerManager : MonoBehaviour
         if (OnTargetPlayerChanged != null)
             OnTargetPlayerChanged(_playersInScene[_currentPlayerID]);
     }
+    
+     
+    public void ToggleCurrentPlayerMovement(bool inToggle)
+    {
+        if (inToggle)
+            _playersInScene[_currentPlayerID].ToggleMovement(inToggle); 
+        else
+            _playersInScene[_currentPlayerID].ToggleMovement(inToggle);
+    }
+
+
+    public PlayerMovement GetCurrentPlayer()
+    {
+        return _playersInScene[_currentPlayerID];
+    }
 }

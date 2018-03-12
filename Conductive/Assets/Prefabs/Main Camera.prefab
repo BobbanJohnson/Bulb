@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 20373166646668200}
   - component: {fileID: 124639359899053892}
   - component: {fileID: 81979344862353104}
-  - component: {fileID: 114880526777650748}
   - component: {fileID: 114439692414304930}
   - component: {fileID: 114975631907585338}
+  - component: {fileID: 114600786476675506}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -102,7 +102,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 4805431037907038}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4294967243
   stopNaNPropagation: 1
   antialiasingMode: 1
   temporalAntialiasing:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &114880526777650748
+--- !u!114 &114600786476675506
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -153,13 +153,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231270561386158}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8842a6e5b9f0a004aa7ad3672b8e0f52, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bee6a78e25e2ad409e854a84d4aaf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smooth: 1
-  smoothSpeed: 0.27
-  lookAt: {fileID: 0}
-  offset: {x: 0, y: 19.4, z: -26}
+  _smoothSpeed: 0.5
+  _lookAt: {fileID: 0}
+  _offset: {x: 0, y: 19.4, z: -26}
+  exitTransform: {fileID: 0}
 --- !u!114 &114975631907585338
 MonoBehaviour:
   m_ObjectHideFlags: 1
