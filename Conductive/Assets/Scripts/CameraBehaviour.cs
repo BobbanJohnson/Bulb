@@ -59,7 +59,7 @@ public class CameraBehaviour : MonoBehaviour
     }
 
 
-    IEnumerator panCameraToPosition(Vector3 targetPos, float time)
+    IEnumerator panCameraToPosition(Vector3 targetPos, float time)time
     {
         // Get some positions to lerp to and from
         Vector3 currentPos = transform.position;

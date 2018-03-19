@@ -156,10 +156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bee6a78e25e2ad409e854a84d4aaf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _smoothSpeed: 0.5
+  _smoothSpeed: 0.15
   _lookAt: {fileID: 0}
   _offset: {x: 0, y: 19.4, z: -26}
-  exitTransform: {fileID: 0}
+  _exitTransform: {fileID: 0}
+  _cameraPanTime: 2
+  _secondsToWaitFor: 3
 --- !u!114 &114975631907585338
 MonoBehaviour:
   m_ObjectHideFlags: 1

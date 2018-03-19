@@ -19,33 +19,39 @@ public class PlayerManager : MonoBehaviour
 
     public void CyclePlayer(bool inForward)
     {
-        _playersInScene[_currentPlayerID].ToggleMovement(false);
+        if (_playersInScene.Count == 1)
+            Debug.Log("There is only on bulb in the scene!");
 
-        if (inForward)
+        else
         {
-            if ((_currentPlayerID + 1) < _playersInScene.Count)
-                _currentPlayerID++;
+            _playersInScene[_currentPlayerID].ToggleMovement(false);
 
-            else if ((_currentPlayerID + 1) == _playersInScene.Count)
-                _currentPlayerID = 0;
+            if (inForward)
+            {
+                if ((_currentPlayerID + 1) < _playersInScene.Count)
+                    _currentPlayerID++;
+
+                else if ((_currentPlayerID + 1) == _playersInScene.Count)
+                    _currentPlayerID = 0;
+            }
+
+            else if (!inForward)
+            {
+                if ((_currentPlayerID - 1) > 0)
+                    _currentPlayerID--;
+
+                else if (_currentPlayerID == 1)
+                    _currentPlayerID = 0;
+
+                else if (_currentPlayerID == 0)
+                    _currentPlayerID = (_playersInScene.Count - 1);
+            }
+
+            _playersInScene[_currentPlayerID].ToggleMovement(true);
+
+            if (OnTargetPlayerChanged != null)
+                OnTargetPlayerChanged(_playersInScene[_currentPlayerID]);
         }
-
-        else if (!inForward)
-        {
-            if ((_currentPlayerID - 1) > 0)
-                _currentPlayerID--;
-
-            else if (_currentPlayerID == 1)
-                _currentPlayerID = 0;
-
-            else if (_currentPlayerID == 0)
-                _currentPlayerID = (_playersInScene.Count - 1);
-        }
-
-        _playersInScene[_currentPlayerID].ToggleMovement(true);
-
-        if (OnTargetPlayerChanged != null)
-            OnTargetPlayerChanged(_playersInScene[_currentPlayerID]);
     }
     
      
