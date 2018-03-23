@@ -5,9 +5,10 @@ using UnityEngine;
 public class CameraBehaviour : MonoBehaviour
 {
     [Header("Smooth camera variables")]
-    [SerializeField] float _smoothSpeed;
+    [SerializeField] float _smoothTime;
     [SerializeField] Transform _lookAt;
     [SerializeField] Vector3 _offset;
+    [SerializeField] bool _followPlayer = true;
 
     [Header("Camera pan variables")]
     [SerializeField] Transform _exitTransform;
@@ -15,8 +16,10 @@ public class CameraBehaviour : MonoBehaviour
     [SerializeField] float _secondsToWaitFor;
 
     // Player management variables
+    Vector3 targetPosition { get { return _lookAt.transform.position + _offset; } }
     PlayerManager _playerManager;
     PlayerMovement _currentPlayer;
+    Vector3 _velocity;
 
 
     void Awake()
@@ -33,17 +36,14 @@ public class CameraBehaviour : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
-        {
-            PanCamera(_exitTransform.position);
-        }
+            StartCoroutine(_PanCamera(_exitTransform.position, 2.0f));
     }
 
 
     void LateUpdate()
     {
-        Vector3 desiredPosition = _lookAt.transform.position + _offset;
-
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, _smoothSpeed);
+        if (_followPlayer)
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _velocity, _smoothTime);
     }
 
 
@@ -52,39 +52,27 @@ public class CameraBehaviour : MonoBehaviour
         _lookAt = inPlayer.transform;
     }
 
-
-    public void PanCamera(Vector3 inTargetPos)
+    IEnumerator _PanCamera(Vector3 inTargetPosition, float inPanSpeed)
     {
-        StartCoroutine(panCameraToPosition(inTargetPos, _cameraPanTime));
-    }
+        Transform originalLookAt = _lookAt;
+        Vector3 startPos = originalLookAt.transform.position;
 
+        GameObject lookAtObject = new GameObject();
+        lookAtObject.transform.position = originalLookAt.transform.position;
+        _lookAt = lookAtObject.transform;
 
-    IEnumerator panCameraToPosition(Vector3 targetPos, float time)
-    {
-        // Get some positions to lerp to and from
-        Vector3 currentPos = transform.position;
-        targetPos += new Vector3(_offset.x, _offset.y, _offset.z);
-
-        _currentPlayer.ToggleMovement(false);
-
-        // Lerp from current position to target position
-        float elapsedTime = 0;
-
-        while (elapsedTime < time)
+        float timer = 0;
+        while (timer < 1)
         {
-            if (elapsedTime == time)
-            {
-                yield return new WaitForSeconds(3);
-                break;
-            }
+            timer += Time.deltaTime * inPanSpeed;
 
-            else
-            {
-                transform.position = Vector3.Lerp(currentPos, targetPos, (elapsedTime / time));
-                elapsedTime += Time.deltaTime;
-                yield return new WaitForEndOfFrame();
-            }
+            _lookAt.transform.position = Vector3.Lerp(startPos, inTargetPosition, timer);
+            yield return null;
         }
-        _currentPlayer.ToggleMovement(true);
+
+        yield return new WaitForSeconds(_secondsToWaitFor);
+
+        _lookAt = originalLookAt;
+        Destroy(lookAtObject);
     }
 }
