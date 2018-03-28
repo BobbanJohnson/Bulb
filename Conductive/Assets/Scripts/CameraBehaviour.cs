@@ -32,6 +32,10 @@ public class CameraBehaviour : MonoBehaviour
         _currentPlayer = _playerManager.GetCurrentPlayer();
     }
 
+    public void CameraPan()
+    {
+        StartCoroutine(_PanCamera(_exitTransform.position, 2.0f));
+    }
 
     void Update()
     {
