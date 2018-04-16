@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: d463aba03c94c2a43b542ecaa88d4502
+timeCreated: 1523634116
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: corner_1x1_a_corners
+    100002: corners_corner_1x1_b
+    100004: corners_corner_1x1_c
+    100006: //RootNode
+    100008: module_3x3_modules
+    100010: modules_module_1x1
+    100012: modules_module_2x1
+    100014: modules_module_3x1
+    100016: transition_3x1_a_transitions
+    100018: transitions_transition_2x1_a
+    100020: transitions_transition_2x1_b
+    100022: transitions_transition_3x1_a1
+    100024: transitions_transition_3x1_b
+    400000: corner_1x1_a_corners
+    400002: corners_corner_1x1_b
+    400004: corners_corner_1x1_c
+    400006: //RootNode
+    400008: module_3x3_modules
+    400010: modules_module_1x1
+    400012: modules_module_2x1
+    400014: modules_module_3x1
+    400016: transition_3x1_a_transitions
+    400018: transitions_transition_2x1_a
+    400020: transitions_transition_2x1_b
+    400022: transitions_transition_3x1_a1
+    400024: transitions_transition_3x1_b
+    2100000: corner_1x1_a_cornersMat
+    2100002: corners_corner_1x1_bMat
+    2100004: corners_corner_1x1_cMat
+    2100006: module_3x3_modulesMat
+    2100008: modules_module_1x1Mat
+    2100010: modules_module_2x1Mat
+    2100012: modules_module_3x1Mat
+    2100014: transition_3x1_a_transitionsMat
+    2100016: transitions_transition_2x1_aMat
+    2100018: transitions_transition_2x1_bMat
+    2100020: transitions_transition_3x1_a1Mat
+    2100022: transitions_transition_3x1_bMat
+    2300000: corner_1x1_a_corners
+    2300002: corners_corner_1x1_b
+    2300004: corners_corner_1x1_c
+    2300006: module_3x3_modules
+    2300008: modules_module_1x1
+    2300010: modules_module_2x1
+    2300012: modules_module_3x1
+    2300014: transition_3x1_a_transitions
+    2300016: transitions_transition_2x1_a
+    2300018: transitions_transition_2x1_b
+    2300020: transitions_transition_3x1_a1
+    2300022: transitions_transition_3x1_b
+    3300000: corner_1x1_a_corners
+    3300002: corners_corner_1x1_b
+    3300004: corners_corner_1x1_c
+    3300006: module_3x3_modules
+    3300008: modules_module_1x1
+    3300010: modules_module_2x1
+    3300012: modules_module_3x1
+    3300014: transition_3x1_a_transitions
+    3300016: transitions_transition_2x1_a
+    3300018: transitions_transition_2x1_b
+    3300020: transitions_transition_3x1_a1
+    3300022: transitions_transition_3x1_b
+    4300000: corner_1x1_a_corners
+    4300002: corners_corner_1x1_b
+    4300004: corners_corner_1x1_c
+    4300006: module_3x3_modules
+    4300008: modules_module_1x1
+    4300010: modules_module_2x1
+    4300012: modules_module_3x1
+    4300014: transition_3x1_a_transitions
+    4300016: transitions_transition_2x1_a
+    4300018: transitions_transition_2x1_b
+    4300020: transitions_transition_3x1_a1
+    4300022: transitions_transition_3x1_b
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
